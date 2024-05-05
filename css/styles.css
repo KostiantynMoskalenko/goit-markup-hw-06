@@ -122,7 +122,16 @@ h6 {
 /*header*/
 
 .header {
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid var(--accent-background-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .header .container {
@@ -237,6 +246,7 @@ h6 {
 
 .header-address-link {
   color: var(--primary-text-color);
+  font-size: 12px;
   font-style: normal;
   display: block;
   /*padding: 24px 0;*/
@@ -244,7 +254,10 @@ h6 {
   transition-property: color;
 }
 
-@media only screen and (max-width: 1158px) {
+@media only screen and (min-width: 1158px) {
+  .header-address-link {
+    font-size: 16px;
+  }
   .header-address-link:hover,
   .header-address-link:focus,
   .header-address-link.active {
@@ -342,6 +355,7 @@ h6 {
     line-height: 1.4em;
     text-transform: capitalize;
     text-align: center;
+    width: 496px;
     max-width: 496px;
     margin-left: auto;
     margin-right: auto;
@@ -448,7 +462,7 @@ h6 {
   margin-bottom: 8px;
 }
 
-@media only screen and (max-width: 1158px) {
+@media only screen and (max-width: 1157px) {
   .advantages-icon {
     display: none;
   }
@@ -481,6 +495,12 @@ h6 {
   font-weight: 500;
 }
 
+@media only screen and (min-width: 1158px) {
+  .main-paragraph-advantages {
+    font-weight: 400;
+  }
+}
+
 /*our works*/
 
 .our-works {
@@ -503,7 +523,7 @@ h6 {
   gap: 24px;
 }
 
-@media only screen and (max-width: 1158px) {
+@media only screen and (max-width: 1157px) {
   .our-works {
     display: none;
   }
@@ -802,8 +822,9 @@ h6 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: start;
-    padding-left: 108px;
-    gap: 24px;
+    width: 584px;
+    row-gap: 72px;
+    column-gap: 24px;
   }
 }
 
@@ -811,6 +832,7 @@ h6 {
   .footer .container {
     flex-wrap: nowrap;
     padding-left: 16px;
+    width: 1158px;
     gap: 80px;
   }
 }
